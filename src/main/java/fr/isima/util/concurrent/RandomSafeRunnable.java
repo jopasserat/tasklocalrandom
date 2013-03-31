@@ -1,4 +1,4 @@
-package fr.isima.random;
+package fr.isima.util.concurrent;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
@@ -18,6 +18,7 @@ public abstract class RandomSafeRunnable implements Runnable {
 
     public RandomSafeRunnable() {
         this.initTaskId();
+        System.out.println("Created RandomSafeRunnable<" + taskId_ + ">");
     }
 
     public int getTaskId() {

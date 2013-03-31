@@ -1,4 +1,5 @@
 import fr.isima.random.*;
+import fr.isima.util.concurrent.*;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 

@@ -7,7 +7,7 @@ package fr.isima.random;
 
 import java.util.Random;
 import fr.isima.util.ArithmeticMod;
-import fr.isima.random.RandomSafeRunnable;
+import fr.isima.util.concurrent.RandomSafeRunnable;
 
 
 public final class TaskLocalRandom {
@@ -40,7 +40,7 @@ public final class TaskLocalRandom {
     /** Current state of the stream. For optimization concerns, only
         Cg is conserved in this implementation (no Bg or Ig).
         We do not make use of nextSeed neither. */
-    private double Cg[];
+    public double Cg[];
 
     private RandomSafeRunnable myRunnable_;
 
