@@ -26,26 +26,29 @@ public class Main3 extends RandomSafeRunnable {
     final int loopsToPerform = Integer.parseInt(argv[0]);
     final int callsToPerform = Integer.parseInt(argv[1]);
 
-    long totalTime = 0;
+    double totalTime = 0;
+
+    int taskId = 0;
 
     // averaging loop
     for (int i = 0; i < loopsToPerform; ++i) {
       // start timing
-      //long startTime = System.nanoTime();
-      for (int j = 0; j < callsToPerform; ++j) {
-	task.getTaskId();
+     long startTime = System.nanoTime();
+     for (int j = 0; j < callsToPerform; ++j) {
+//      while (true) {
+	taskId += task.getTaskId();
       }
       // stop timing and sum
-      //long endTime = System.nanoTime();
+      long endTime = System.nanoTime();
 
-      //totalTime += (endTime - startTime);
+      totalTime += (endTime - startTime);
     }
 
-/*
+
     System.out.println ( "(" + loopsToPerform + " x ) " + callsToPerform +
 	" calls to RandomSafeRunnable.getTaskId() performed in " + 
-	totalTime / loopsToPerform + " ns" );
-*/
+	(totalTime / loopsToPerform)/1000000.0 + " ms" );
+
   }
 }
 
