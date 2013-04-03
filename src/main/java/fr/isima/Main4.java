@@ -16,7 +16,8 @@ public class Main4 extends RandomSafeRunnable {
 
       TaskLocalRandom rng = new TaskLocalRandom(this);
 
-      for (int i = 0; i < 1000000; ++i) {
+//      for (int i = 0; i < 1000000; ++i) {
+      while(true) {
 	rng.next();
       }
     }

@@ -17,7 +17,7 @@ mergeStrategy in assembly <<= (mergeStrategy in assembly) { (old) =>
  }
 }
 
-mainClass in assembly := Some("fr.isima.Main3")
+mainClass in assembly := Some("fr.isima.Main4")
 
 resolvers ++= Seq(
   "ScalaNLP Maven2" at "http://repo.scalanlp.org/repo",
